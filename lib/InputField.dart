@@ -31,12 +31,12 @@ class InputField extends StatelessWidget {
               bottom: BorderSide(
                   width: 30.0, color: Color.fromARGB(255, 206, 206, 206)),
             ))
-            //       child: const TextField(
-            //         decoration: InputDecoration(
-            //             hintText: "Enter your password",
-            //             hintStyle: TextStyle(color: Colors.grey),
-            //             border: InputBorder.none),
-            // ),
+                  child: const TextField(
+                    decoration: InputDecoration(
+                        hintText: "Enter your password",
+                        hintStyle: TextStyle(color: Colors.grey),
+                        border: InputBorder.none),
+            ),
             ),
       ],
     );
