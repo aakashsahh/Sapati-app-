@@ -8,9 +8,8 @@ class InputField extends StatelessWidget {
     return Column(
       children: <Widget>[
         Container(
-          padding: EdgeInsets.all(10),
+          padding: EdgeInsets.all(6),
           decoration: const BoxDecoration(
-
             border: Border(
               bottom: BorderSide(
                   width: 30.0, color: Color.fromARGB(255, 206, 206, 206)),
@@ -25,19 +24,19 @@ class InputField extends StatelessWidget {
           ),
         ),
         Container(
-            padding: const EdgeInsets.all(10),
-            decoration: const BoxDecoration(
-                border: Border(
-              bottom: BorderSide(
-                  width: 30.0, color: Color.fromARGB(255, 206, 206, 206)),
-            ))
-            //       child: const TextField(
-            //         decoration: InputDecoration(
-            //             hintText: "Enter your password",
-            //             hintStyle: TextStyle(color: Colors.grey),
-            //             border: InputBorder.none),
-            // ),
-            ),
+          padding: const EdgeInsets.all(6),
+          decoration: const BoxDecoration(
+              border: Border(
+            bottom: BorderSide(
+                width: 30.0, color: Color.fromARGB(255, 206, 206, 206)),
+          )),
+          child: const TextField(
+            decoration: InputDecoration(
+                hintText: "Enter your password",
+                hintStyle: TextStyle(color: Colors.grey),
+                border: InputBorder.none),
+          ),
+        ),
       ],
     );
   }
