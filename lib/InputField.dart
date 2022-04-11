@@ -5,39 +5,34 @@ class InputField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        Container(
-          padding: EdgeInsets.all(6),
-          decoration: const BoxDecoration(
-            border: Border(
-              bottom: BorderSide(
-                  width: 30.0, color: Color.fromARGB(255, 206, 206, 206)),
-              //bottom: BorderSide(color: Colors.grey[200])
-            ),
-          ),
-          child: const TextField(
+    return Container(
+      padding: const EdgeInsets.all(10),
+      child: Column(
+        children: [
+          TextField(
             decoration: InputDecoration(
+                fillColor: Colors.grey.shade100,
+                filled: true,
                 hintText: "Enter your email",
-                hintStyle: TextStyle(color: Colors.grey),
-                border: InputBorder.none),
+                hintStyle: const TextStyle(color: Colors.grey),
+                border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10))),
           ),
-        ),
-        Container(
-          padding: const EdgeInsets.all(6),
-          decoration: const BoxDecoration(
-              border: Border(
-            bottom: BorderSide(
-                width: 30.0, color: Color.fromARGB(255, 206, 206, 206)),
-          )),
-          child: const TextField(
+          const SizedBox(
+            height: 10,
+          ),
+          TextField(
+            obscureText: true,
             decoration: InputDecoration(
-                hintText: "Enter your password",
+                fillColor: Colors.grey.shade100,
+                filled: true,
+                hintText: "Password",
                 hintStyle: TextStyle(color: Colors.grey),
-                border: InputBorder.none),
+                border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10))),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
