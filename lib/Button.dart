@@ -11,30 +11,40 @@ class Button extends StatelessWidget {
       children: [
         Container(
           height: 50,
-          margin: EdgeInsets.symmetric(horizontal: 50),
+          margin: const EdgeInsets.symmetric(horizontal: 50),
           decoration: BoxDecoration(
-            color: Color.fromARGB(255, 23, 8, 228),
+            color: const Color.fromARGB(255, 23, 8, 228),
             borderRadius: BorderRadius.circular(10),
           ),
-          child: const Center(
-            child: Text(
-              "Login",
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold),
-            ),
+          child: Center(
+            child: TextButton(
+                onPressed: () {},
+                child: const Text(
+                  "Login",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16),
+                )),
           ),
         ),
-        SizedBox(
-          height: 40,
+        const SizedBox(
+          height: 20,
         ),
-        Text(
-          "Sign Up",
-          style: TextStyle(color: Colors.grey),
-        ),
-        SizedBox(
-          height: 40,
+        Container(
+          height: 50,
+          margin: const EdgeInsets.symmetric(horizontal: 50),
+          child: Center(
+            child: TextButton(
+                onPressed: () {},
+                child: Text(
+                  "Sign Up",
+                  style: TextStyle(
+                      color: Colors.grey,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18),
+                )),
+          ),
         ),
       ],
     );
