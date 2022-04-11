@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'home.dart';
+import 'splash.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -12,12 +14,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // title: 'Sapati',
-      // theme: ThemeData(
-      //   primarySwatch: Colors.blue,
-      // ),
+      title: 'Sapati',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
       debugShowCheckedModeBanner: false,
-      home: MyHomePage(),
+      home: SplashScreen(),
     );
   }
 }

@@ -21,11 +21,11 @@ class InputWrapper extends StatelessWidget {
           SizedBox(
             height: 40,
           ),
-          Text(
+          const Text(
             "Forgot Password?",
             style: TextStyle(color: Colors.grey),
           ),
-          SizedBox(
+          const SizedBox(
             height: 40,
           ),
           Button()

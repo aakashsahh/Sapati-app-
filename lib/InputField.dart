@@ -13,7 +13,6 @@ class InputField extends StatelessWidget {
             border: Border(
               bottom: BorderSide(
                   width: 30.0, color: Color.fromARGB(255, 206, 206, 206)),
-              //bottom: BorderSide(color: Colors.grey[200])
             ),
           ),
           child: const TextField(

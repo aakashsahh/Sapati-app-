@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 
 class Button extends StatelessWidget {
   var onPressed;
-
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -31,7 +30,7 @@ class Button extends StatelessWidget {
         ),
         Text(
           "Sign Up",
-          style: TextStyle(color: Colors.grey),
+          style: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold),
         ),
         SizedBox(
           height: 40,
