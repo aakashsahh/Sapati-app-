@@ -10,7 +10,7 @@ class Button extends StatelessWidget {
     return Column(
       children: [
         Container(
-          height: 50,
+          height: 4,
           margin: EdgeInsets.symmetric(horizontal: 50),
           decoration: BoxDecoration(
             color: Color.fromARGB(255, 23, 8, 228),
@@ -18,23 +18,13 @@ class Button extends StatelessWidget {
           ),
           child: const Center(
             child: Text(
-              "Login",
+              "Signup",
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 15,
                   fontWeight: FontWeight.bold),
             ),
           ),
-        ),
-        SizedBox(
-          height: 40,
-        ),
-        Text(
-          "Sign Up",
-          style: TextStyle(color: Colors.grey),
-        ),
-        SizedBox(
-          height: 40,
         ),
       ],
     );
