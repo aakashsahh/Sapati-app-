@@ -17,8 +17,7 @@ class Button extends StatelessWidget {
             crossAxisAlignment: WrapCrossAlignment.center,
             children: const [
               Icon(Icons.android), // <-- Use 'Image.asset(...)' here
-              SizedBox(width: 16),
-              Text('Sign in with Google'),
+              SizedBox(width: 16), Text('Sign in with Google'),
             ],
           ),
         ),
