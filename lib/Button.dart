@@ -12,6 +12,21 @@ class Button extends StatelessWidget {
         Container(
           height: 50,
           margin: const EdgeInsets.symmetric(horizontal: 50),
+          child: Center(
+            child: TextButton(
+                onPressed: () {},
+                child: const Text(
+                  "Forgot Password?",
+                  style: TextStyle(color: Colors.grey, fontSize: 16),
+                )),
+          ),
+        ),
+        const SizedBox(
+          height: 10,
+        ),
+        Container(
+          height: 50,
+          margin: const EdgeInsets.symmetric(horizontal: 50),
           decoration: BoxDecoration(
             color: const Color.fromARGB(255, 23, 8, 228),
             borderRadius: BorderRadius.circular(10),
@@ -37,7 +52,7 @@ class Button extends StatelessWidget {
           child: Center(
             child: TextButton(
                 onPressed: () {},
-                child: Text(
+                child: const Text(
                   "Sign Up",
                   style: TextStyle(
                       color: Colors.grey,
