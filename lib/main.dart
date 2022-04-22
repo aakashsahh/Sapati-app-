@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:sapati/Forgotpw.dart';
 
 import 'home.dart';
+import 'Forgotpw.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
       //   primarySwatch: Colors.blue,
       // ),
       debugShowCheckedModeBanner: false,
-      home: MyHomePage(),
+      home: Forgotpw(),
     );
   }
 }
