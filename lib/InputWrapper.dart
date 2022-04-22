@@ -8,21 +8,23 @@ class InputWrapper extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.all(40),
-      child: Column(
-        children: <Widget>[
-          SizedBox(
-            height: 40,
-          ),
-          Container(
-            decoration: BoxDecoration(
-                color: Colors.white, borderRadius: BorderRadius.circular(10)),
-            child: InputField(),
-          ),
-          SizedBox(
-            height: 30,
-          ),
-          Button()
-        ],
+      child: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            SizedBox(
+              height: 40,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                  color: Colors.white, borderRadius: BorderRadius.circular(10)),
+              child: InputField(),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Button()
+          ],
+        ),
       ),
     );
   }
