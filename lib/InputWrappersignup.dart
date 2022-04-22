@@ -9,22 +9,23 @@ class InputWrappersignup extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.all(40),
-      child: Column(
-        children: <Widget>[
-          SizedBox(
-            height: 40,
-          ),
-          Container(
-            decoration: BoxDecoration(
-                color: Colors.white, borderRadius: BorderRadius.circular(10)),
-            child: InputFieldsignup(),
-          ),
-          SizedBox(
-            height: 40,
-          ),
-          
-          Buttonsignup()
-        ],
+      child: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            SizedBox(
+              height: 40,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                  color: Colors.white, borderRadius: BorderRadius.circular(10)),
+              child: InputFieldsignup(),
+            ),
+            SizedBox(
+              height: 40,
+            ),
+            Buttonsignup()
+          ],
+        ),
       ),
     );
   }
