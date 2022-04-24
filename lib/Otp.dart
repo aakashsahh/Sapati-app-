@@ -71,10 +71,10 @@ class _OtpState extends State<Otp> {
                 height: 28,
               ),
               Container(
-                padding: const EdgeInsets.all(10),
+                padding: const EdgeInsets.all(18),
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(18),
                 ),
                 child: Column(
                   children: [
@@ -114,34 +114,37 @@ class _OtpState extends State<Otp> {
                           ),
                         ),
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),
               const SizedBox(
                 height: 18,
               ),
-              const Text(
-                "Didn't you receive any code?",
-                style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black38,
-                ),
-                textAlign: TextAlign.center,
-              ),
               const SizedBox(
                 height: 18,
               ),
-              const Text(
-                "Resend New Code",
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.purple,
-                ),
-                textAlign: TextAlign.center,
+              TextButton(
+                  onPressed: () {},
+                  child: const Text(
+                    "Didn't you receive any code?",
+                    style: TextStyle(
+                        color: Colors.grey,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14),
+                  )),
+              const SizedBox(
+                height: 18,
               ),
+              TextButton(
+                  onPressed: () {},
+                  child: const Text(
+                    "Resend",
+                    style: TextStyle(
+                        color: Colors.blue,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18),
+                  )),
             ],
           ),
         ),
@@ -151,7 +154,7 @@ class _OtpState extends State<Otp> {
 
   Widget _textFieldOTP({required bool first, last}) {
     return Container(
-      height: 85,
+      height: 60,
       child: AspectRatio(
         aspectRatio: 1.0,
         child: TextField(
