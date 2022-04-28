@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:sapati/Dashboard.dart';
 
 import 'splash.dart';
 import 'Otp.dart';
+import 'Dashboard.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,12 +15,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Sapati',
+      //title: 'Sapati',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        //primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: Otp(),
+      home: dashboard(),
     );
   }
 }
