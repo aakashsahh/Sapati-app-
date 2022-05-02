@@ -1,8 +1,11 @@
+//import 'dart:js';
+
 import 'package:flutter/material.dart';
+import 'package:sapati/transaction_item.dart';
+import 'Transaction_model.dart';
 
 class dashboard extends StatefulWidget {
   dashboard({Key? key}) : super(key: key);
-  bool _isIncome = false;
   @override
   State<dashboard> createState() => _dashboardState();
 }
@@ -15,7 +18,7 @@ class _dashboardState extends State<dashboard> {
       body: Column(
         children: <Widget>[
           _appBarBottomSection(),
-          // _mainBody(),
+          _mainBody(),
         ],
       ),
     );
@@ -54,6 +57,7 @@ class _dashboardState extends State<dashboard> {
                 ),
               ),
             ),
+          
           ),
         ),
       ],
@@ -79,7 +83,6 @@ class _dashboardState extends State<dashboard> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
-              /// Income
               GestureDetector(
                 onTap: () => setState(() {}),
                 child: const Text(
@@ -92,8 +95,6 @@ class _dashboardState extends State<dashboard> {
                   ),
                 ),
               ),
-
-              /// Outcome
               GestureDetector(
                 onTap: () => setState(() {}),
                 child: const Text(
@@ -140,4 +141,44 @@ class _dashboardState extends State<dashboard> {
       ),
     );
   }
+}
+
+//Mainbody
+Widget _mainBody() {
+  return SingleChildScrollView(
+    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+    physics: const ClampingScrollPhysics(),
+    child: Column(
+      children: <Widget>[
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            // ignore: prefer_const_literals_to_create_immutables
+            children: <Widget>[
+              const Text(
+                'Transactions',
+                style: TextStyle(
+                  color: Colors.blue,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: ListView.builder(
+              shrinkWrap: true,
+              itemCount: transactionlist.transaction_model.length,
+              itemBuilder: (context, index) {
+                return transactionwidget(
+                  transactionmodel: transactionlist.transaction_model[index],
+                );
+              }),
+        ),
+      ],
+    ),
+  );
 }
