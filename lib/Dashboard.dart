@@ -57,7 +57,6 @@ class _dashboardState extends State<dashboard> {
                 ),
               ),
             ),
-          
           ),
         ),
       ],
@@ -145,40 +144,39 @@ class _dashboardState extends State<dashboard> {
 
 //Mainbody
 Widget _mainBody() {
-  return SingleChildScrollView(
-    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
-    physics: const ClampingScrollPhysics(),
-    child: Column(
-      children: <Widget>[
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            // ignore: prefer_const_literals_to_create_immutables
-            children: <Widget>[
-              const Text(
-                'Transactions',
-                style: TextStyle(
-                  color: Colors.blue,
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500,
-                ),
+  return Column(
+    children: <Widget>[
+      const SizedBox(
+        height: 20,
+      ),
+      Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 8),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          // ignore: prefer_const_literals_to_create_immutables
+          children: <Widget>[
+            const Text(
+              'Transactions',
+              style: TextStyle(
+                color: Colors.blue,
+                fontSize: 18,
+                fontWeight: FontWeight.w500,
               ),
-            ],
-          ),
+            ),
+          ],
         ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: ListView.builder(
-              shrinkWrap: true,
-              itemCount: transactionlist.transaction_model.length,
-              itemBuilder: (context, index) {
-                return transactionwidget(
-                  transactionmodel: transactionlist.transaction_model[index],
-                );
-              }),
-        ),
-      ],
-    ),
+      ),
+      Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ListView.builder(
+            shrinkWrap: true,
+            itemCount: transactionlist.transaction_model.length,
+            itemBuilder: (context, index) {
+              return transactionwidget(
+                transactionmodel: transactionlist.transaction_model[index],
+              );
+            }),
+      ),
+    ],
   );
 }
