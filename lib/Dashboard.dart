@@ -1,5 +1,3 @@
-//import 'dart:js';
-
 import 'package:flutter/material.dart';
 import 'package:sapati/transaction_item.dart';
 import 'Transaction_model.dart';
@@ -144,6 +142,7 @@ class _dashboardState extends State<dashboard> {
 
 //Mainbody
 Widget _mainBody() {
+  String dropdownValue = 'Lend';
   return Column(
     children: <Widget>[
       const SizedBox(
@@ -152,7 +151,7 @@ Widget _mainBody() {
       Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           // ignore: prefer_const_literals_to_create_immutables
           children: <Widget>[
             const Text(
@@ -163,6 +162,31 @@ Widget _mainBody() {
                 fontWeight: FontWeight.w500,
               ),
             ),
+            DropdownButton<String>(
+              value: dropdownValue,
+              icon: const Icon(Icons.arrow_downward),
+              elevation: 16,
+              style: const TextStyle(
+                  color: Colors.blue,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 18),
+              underline: Container(
+                height: 2,
+                color: Colors.blue,
+              ),
+              onChanged: (String? newValue) {
+                // setState(() {
+                //   dropdownValue = newValue!;
+                // });
+              },
+              items: <String>['Lend', 'Borrow']
+                  .map<DropdownMenuItem<String>>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(value),
+                );
+              }).toList(),
+            )
           ],
         ),
       ),
