@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
+//import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:sapati/transaction_item.dart';
 import 'Transaction_model.dart';
 
@@ -17,6 +19,21 @@ class _dashboardState extends State<dashboard> {
         children: <Widget>[
           _appBarBottomSection(),
           _mainBody(),
+        ],
+      ),
+      floatingActionButton: SpeedDial(
+        //animatedIcon: AnimatedIcons.menu_close,
+        children: [
+          SpeedDialChild(
+            child: const Icon(Icons.arrow_downward),
+            label: "Borrow",
+            onTap: () => print("Borrow selected"),
+          ),
+          SpeedDialChild(
+            child: const Icon(Icons.arrow_upward),
+            label: "Lend",
+            onTap: () => print("Lend selected"),
+          ),
         ],
       ),
     );
