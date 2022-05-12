@@ -22,7 +22,7 @@ class _dashboardState extends State<dashboard> {
         ],
       ),
       floatingActionButton: SpeedDial(
-        //animatedIcon: AnimatedIcons.menu_close,
+        animatedIcon: AnimatedIcons.add_event,
         children: [
           SpeedDialChild(
             child: const Icon(Icons.arrow_downward),
